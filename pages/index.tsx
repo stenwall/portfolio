@@ -1,13 +1,22 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import Link from 'next/link';
+import Layout from '../components/Layout';
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
+const index = () => (
+  <Layout title="Users List | Next.js + TypeScript Example">
+    <h1>Users List</h1>
     <p>
-      <Link href="/about">About</Link>
+      Example fetching data from inside <code>getStaticProps()</code>.
     </p>
+      <Link href="/">Go home</Link>
   </Layout>
-)
+);
 
-export default IndexPage
+// export const getStaticProps: GetStaticProps = async () => {
+//   // Example for including static props in a Next.js function component page.
+//   // Don't forget to include the respective types for any props passed into
+//   // the component.
+//   // const items: User[] = sampleUserData
+//   // return { props: { items } }
+// }
+
+export default index;
