@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { dotAnim, transitionAnim } from 'helpers';
 import Layout from '@components/layout/DefaultLayout';
 import CodeIcon from '@components/svg/CodeIcon';
@@ -11,6 +11,7 @@ import Flick from '@components/svg/Flick';
 const Index = () => {
   const flickRef = useRef<SVGSVGElement>(null);
   const blipRef = useRef<SVGSVGElement>(null);
+  const [subtitle, setSubtitle] = useState(null);
 
   useEffect(() => {
     const flickSvg = flickRef.current;
@@ -45,6 +46,20 @@ const Index = () => {
     transitionAnim(blipChildren);
   };
 
+  const hoverSvgHandler = e => {
+    if (e.target.firstChild?.id) {
+      switch (e.target.firstChild?.id) {
+        case 'camera-icon':
+          setSubtitle('| director of photography');
+          break;
+        case 'code-icon':
+          setSubtitle('| full-stack developer');
+          break;
+        default:
+      }
+    }
+  };
+
   return (
     <Layout>
       <main className={styles['main-start']}>
@@ -53,6 +68,7 @@ const Index = () => {
             <Blip ref={blipRef} />
             <Link
               onMouseEnter={blipHoverHandler}
+              onMouseOver={hoverSvgHandler}
               href="/dev"
               className={styles.icon}
             >
@@ -63,6 +79,7 @@ const Index = () => {
             <Flick ref={flickRef} />
             <Link
               onMouseEnter={flickHoverHandler}
+              onMouseOver={hoverSvgHandler}
               href="/dop"
               className={styles.icon}
             >
@@ -71,6 +88,10 @@ const Index = () => {
           </div>
         </section>
       </main>
+      <div className={styles.title}>
+        <h1>karin stenwall <span>{subtitle}</span></h1>
+        
+      </div>
     </Layout>
   );
 };
