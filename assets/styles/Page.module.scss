@@ -89,7 +89,7 @@
 .title {
   position: fixed;
   bottom: 0;
-  left: calc(50% + 2rem);
+  left: calc(50%);
   transform: translateX(-50%);
 
   h1 {
@@ -100,7 +100,7 @@
 
     span {
       display: inline-block;
-      min-width: 23rem;
+      // min-width: 23rem;
     }
   }
 }

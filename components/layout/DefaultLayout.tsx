@@ -21,8 +21,10 @@ const DefaultLayout = ({ children, title = 'Karin Stenwall' }: Props) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <style jsx global>{`
-      html, body {
+      html {
         font-family: ${sourceCodePro.style.fontFamily};
+      }
+      body {
         background-color: #faf9f6;
       }
     `}</style>
