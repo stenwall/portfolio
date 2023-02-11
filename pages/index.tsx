@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import {
   BaseSyntheticEvent,
-  MutableRefObject,
   useEffect,
   useRef,
   useState
@@ -109,7 +108,7 @@ const Index = () => {
           </div>
         </section>
       </main>
-      <div className={styles.title}>
+      <div className={styles['start-title']}>
         <h1>
           karin stenwall <span>{subtitle}</span>
         </h1>
@@ -119,3 +118,17 @@ const Index = () => {
 };
 
 export default Index;
+
+// sources to svg's
+//-----------------------
+// make svg's with paths
+// https://www.svgator.com/blog/how-to-create-a-handwriting-animation/
+// https://app.svgator.com/
+// draw the lines without
+// https://jakearchibald.com/2013/animated-line-drawing-svg/
+// crop to content
+// https://svgcrop.com/
+// make svgr's
+// https://react-svgr.com/playground/
+// codepen with vanilla js
+// https://codepen.io/nearbyalmond/pen/oNMayvv

@@ -1,6 +1,6 @@
 .flick {
   padding: 2rem;
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
   line-height: 2.2rem;
 
@@ -120,6 +120,6 @@
 
 @media screen and (min-width: 1620px) {
   .gallery-list {
-    grid-template-rows: repeat(6, 320px);
+    grid-template-rows: repeat(6, 250px);
   }
 }
