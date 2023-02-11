@@ -1,6 +1,15 @@
 import React, { ReactNode } from 'react';
-import Link from 'next/link';
 import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { Nunito_Sans } from '@next/font/google';
+import styles from '@components/layout/Layout.module.scss';
+
+const nunitoSans = Nunito_Sans({
+  weight: ['200', '300', '400'],
+  style: ['normal'],
+  subsets: ['latin']
+});
 
 type Props = {
   children?: ReactNode;
@@ -9,25 +18,53 @@ type Props = {
 
 const FlickLayout = ({
   children,
-  title = 'Karin Stenwall | Full-Stack Developer'
-}: Props) => (
+  title = 'Karin Stenwall | Director of Photography'
+}: Props) => {
+  const { asPath: currentPath } = useRouter();
+
+  return (
   <>
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <header>
-      <nav>
-        <Link href="/">Home</Link>
-      </nav>
-    </header>
+    <style jsx global>{`
+      html {
+        font-family: ${nunitoSans.style.fontFamily};
+        letter-spacing: 0.04em;
+      }
+      body {
+        background-color: #222222;
+        color: #dadada;
+      }
+    `}</style>
+    <header className={styles.header}>
+          <h1>Karin Stenwall / Director of Photography</h1>
+          <nav className={styles.nav}>
+            <Link
+              href="/dop"
+              className={currentPath === '/dop' ? styles.active : ''}
+            >
+              selected work
+            </Link>
+            <Link
+              href="/dop/resume"
+              className={currentPath === '/dop/resume' ? styles.active : ''}
+            >
+              resumé
+            </Link>
+            <Link
+              href="/dop/contact"
+              className={currentPath === '/dop/contact' ? styles.active : ''}
+            >
+              contact
+            </Link>
+          </nav>
+        </header>
     {children}
-    <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
-    </footer>
   </>
 );
+    }
 
 export default FlickLayout;

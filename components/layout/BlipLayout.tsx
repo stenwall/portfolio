@@ -9,7 +9,7 @@ type Props = {
 
 const BlipLayout = ({
   children,
-  title = 'Karin Stenwall | Director of Photography'
+  title = 'Karin Stenwall | Full-Stack Developer'
 }: Props) => (
   <>
     <Head>

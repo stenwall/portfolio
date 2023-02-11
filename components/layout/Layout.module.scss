@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  .nav {
+    margin-left: auto;
+    display: flex;
+    gap: 2rem;
+
+    a {
+      all: unset;
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      padding: 0.5rem 0;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #dadada;
+        transform-origin: bottom left;
+        transition: transform 0.3s ease-out;
+      }
+
+      &:not(.active):hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+
+      &.active::after {
+        transform: scaleX(1);
+        transition: none;
+      }
+    }
+  }
+}
