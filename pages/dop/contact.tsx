@@ -26,10 +26,25 @@ const Contact = () => {
             <p>I am based in Stockholm, fluent in Swedish and English.</p>
             <p>You want to talk? Send an e-mail or say hello on LinkedIn:</p>
             <div className={styles.links}>
-              <motion.a
+              {/* <motion.a
                 href="mailto:hello@karinstenwall.se"
                 aria-label="Mailadress"
                 whileHover={{ scale: 1.3 }}
+                whileFocus={{ scale: 1.3 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <FontAwesomeIcon icon={faPaperPlane} />
+              </motion.a> */}
+              <motion.a
+                href="mailto:hello@karinstenwall.se"
+                aria-label="Mailadress"
+                whileHover={{
+                  scale: [1, 1.4, 1.2],
+                  rotate: [0, 10, -10, 0],
+                  transition: {
+                    duration: 0.4
+                  }
+                }}
                 whileFocus={{ scale: 1.3 }}
                 whileTap={{ scale: 0.9 }}
               >
@@ -39,7 +54,13 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/karin-stenwall/"
                 aria-label="LinkedIn profile"
                 target="_blank"
-                whileHover={{ scale: 1.3 }}
+                whileHover={{
+                  scale: [1, 1.4, 1.2],
+                  rotate: [0, 10, -10, 0],
+                  transition: {
+                    duration: 0.4
+                  }
+                }}
                 whileFocus={{ scale: 1.3 }}
                 whileTap={{ scale: 0.9 }}
               >

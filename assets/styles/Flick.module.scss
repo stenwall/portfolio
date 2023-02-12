@@ -74,17 +74,55 @@
 .gallery-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: repeat(6, 150px);
+  grid-template-rows: repeat(4, 150px);
   grid-auto-flow: dense;
+
+  li {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+  }
 
   figure {
     display: block;
     height: 100%;
 
+    .image-container {
+      position: relative;
+      height: 100%;
+    }
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    figcaption {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h2 {
+        color: white;
+        font-size: 1.2rem;
+        padding: 0.2rem 0.5rem;
+        border: 1px solid white;
+      }
+    }
+
+    .hover-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, #ce86c0 0%, #0480a9 100%);
     }
   }
 }
@@ -99,27 +137,43 @@
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
   .gallery-list {
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    grid-template-rows: repeat(6, 200px);
+    grid-template-rows: repeat(7, 200px);
   }
 }
 
-@media screen and (min-width: 1080px) {
+// REMOVE THIS IF 12 ITEMS
+@media screen and (min-width: 810px) {
   .gallery-list {
-    grid-template-columns: repeat(4, minmax(270px, 1fr));
-
-    li:nth-child(11),
-    li:nth-child(12) {
+    li:nth-child(10) {
       grid-column: span 2;
       grid-row: span 2;
     }
   }
 }
 
+@media screen and (min-width: 1080px) {
+  .gallery-list {
+    grid-template-columns: repeat(4, minmax(270px, 1fr));
+    grid-template-rows: repeat(4, 200px);
+
+    li:nth-child(11),
+    li:nth-child(12) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    // REMOVE THIS IF 12 ITEMS
+    li:nth-child(10) {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+  }
+}
+
 @media screen and (min-width: 1620px) {
   .gallery-list {
-    grid-template-rows: repeat(6, 250px);
+    grid-template-rows: repeat(4, 250px);
   }
 }

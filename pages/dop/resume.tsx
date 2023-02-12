@@ -9,8 +9,8 @@ const Resume = () => (
       <h3>Education</h3>
       <ul>
         <li>
-          2012-2015 Bachelor in cinematography at Stockholm academy of dramatic
-          arts, Sweden
+          2012-2015 Bachelor in Cinematography at Stockholm Academy of Dramatic
+          Arts (Stockholm University of the Arts), Sweden
         </li>
         <li>2006-2008 Basic filmproduction at Stockholm filmskola, Sweden</li>
       </ul>
