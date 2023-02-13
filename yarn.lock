@@ -399,6 +399,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/vimeo__player@npm:^2.16.3":
+  version: 2.16.3
+  resolution: "@types/vimeo__player@npm:2.16.3"
+  checksum: 0d278ce5c112aa7be9c965190dce3d576d26841480df07bdb2d03ddf2cc6895e2ccc678ba0575ffd247ec7db03f3e92fe361b3ccc62040d160eb796113f97a3c
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/parser@npm:^5.51.0":
   version: 5.51.0
   resolution: "@typescript-eslint/parser@npm:5.51.0"
@@ -458,6 +465,16 @@ __metadata:
     "@typescript-eslint/types": 5.51.0
     eslint-visitor-keys: ^3.3.0
   checksum: b49710f3c6b3b62a846a163afffd81be5eb2b1f44e25bec51ff3c9f4c3b579d74aa4cbd3753b4fc09ea3dbc64a7062f9c658c08d22bb2740a599cb703d876220
+  languageName: node
+  linkType: hard
+
+"@vimeo/player@npm:^2.18.0":
+  version: 2.18.0
+  resolution: "@vimeo/player@npm:2.18.0"
+  dependencies:
+    native-promise-only: 0.8.1
+    weakmap-polyfill: 2.0.4
+  checksum: 8f7af909310a11872df4b08844c8abb7f7407f2492dd1f27cb989a1d540e011132f1dc6eca0a390e41fce6302370bfaa847f084808dd06e88ff64ee984d840c9
   languageName: node
   linkType: hard
 
@@ -1684,6 +1701,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"native-promise-only@npm:0.8.1":
+  version: 0.8.1
+  resolution: "native-promise-only@npm:0.8.1"
+  checksum: bb4d8416c47d1b2cef0d4eb2c7f3442a9ed04d3734287f4037dfb7ff25948612976928e5baed105081927d5337d3f657e3a42ad2e8cca38a6428a81b32cd6dc4
+  languageName: node
+  linkType: hard
+
 "natural-compare@npm:^1.4.0":
   version: 1.4.0
   resolution: "natural-compare@npm:1.4.0"
@@ -2093,7 +2117,9 @@ __metadata:
     "@types/node": ^18.11.18
     "@types/react": ^18.0.26
     "@types/react-dom": ^18.0.10
+    "@types/vimeo__player": ^2.16.3
     "@typescript-eslint/parser": ^5.51.0
+    "@vimeo/player": ^2.18.0
     eslint: ^8.7.0
     framer-motion: ^9.0.2
     next: 13.1.1
@@ -2425,6 +2451,13 @@ __metadata:
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
   checksum: 474acf1146cb2701fe3b074892217553dfcf9a031280919ba1b8d651a068c9b15d863b7303cb15bd00a862b498e6cf4ad7b4a08fb134edd5a6f7641681cb54a2
+  languageName: node
+  linkType: hard
+
+"weakmap-polyfill@npm:2.0.4":
+  version: 2.0.4
+  resolution: "weakmap-polyfill@npm:2.0.4"
+  checksum: 4c733a927f7ac6b1244a4acf6a227bddfd74aa60eb03c21a10f7133b47b2d47c3b2a684f1c4723d574a5c5be516f7bb37af5eed7369a93aed5e19fb8eab6948c
   languageName: node
   linkType: hard
 
