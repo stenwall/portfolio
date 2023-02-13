@@ -28,4 +28,7 @@ export default Flick;
 
 // sources/tools
 //----------------------------
+// responsive image grid
 // https://css-tricks.com/look-ma-no-media-queries-responsive-layouts-using-css-grid/
+// inspo for hover effect
+// https://codepen.io/maheshambure21/pen/GgVbVW
