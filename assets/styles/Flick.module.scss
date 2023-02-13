@@ -2,7 +2,7 @@
   padding: 2rem;
   max-width: 1600px;
   margin: 0 auto;
-  line-height: 2.2rem;
+  line-height: 2rem;
 
   h2 {
     font-size: 2rem;
@@ -67,6 +67,41 @@
       cursor: pointer;
       display: block;
       font-size: 2rem;
+    }
+  }
+}
+
+.film {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  @media screen and (min-width: 1250px) {
+    display: grid;
+    grid-template-columns: minmax(884px, 1.8fr) 1fr;
+    gap: 4rem;
+  }
+
+  .film-desc {
+    @media screen and (max-width: 1249px) {
+      display: grid;
+      grid-template-columns: max-content auto;
+      gap: 5rem;
+    }
+
+    ul,
+    p {
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    span {
+      // font-family: var(--nunito);
+      font-weight: 700;
+    }
+
+    .extra {
+      font-weight: 700;
     }
   }
 }
