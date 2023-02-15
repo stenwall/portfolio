@@ -4,6 +4,15 @@
   margin: 0 auto;
   line-height: 2rem;
 
+  .heading {
+    margin-bottom: 4rem;
+
+    h2 {
+      font-size: 2rem;
+      margin: 0;
+    }
+  }
+
   h2 {
     font-size: 2rem;
     margin: 0 0 4rem;

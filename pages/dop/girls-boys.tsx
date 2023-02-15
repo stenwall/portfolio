@@ -1,24 +1,46 @@
-import Link from 'next/link';
 import styles from '@styles/Flick.module.scss';
 import Layout from '@components/layout/FlickLayout';
+import YouTubePlayer from '@components/video/YouTubePlayer';
+import VimeoPlayer from '@components/video/VimeoPlayer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 const GirlsBoys = () => (
   <Layout>
     <main className={styles.flick}>
       <h2>Girls & Boys</h2>
-      <h3>Education</h3>
-      <ul>
-        <li>
-          2012-2015 Bachelor in cinematography at Stockholm academy of dramatic
-          arts, Sweden
-        </li>
-        <li>2006-2008 Basic filmproduction at Stockholm filmskola, Sweden</li>
-      </ul>
-      <h3>Music promos</h3>
-      <p>
-        Peter Bjorn & John, Existensminimum, Lisa Ekdahl, EP’s Trailerpark,
-        Soles of men, San Fairy Ann, APA
-      </p>
+      <section className={styles.film}>
+        <YouTubePlayer id="zRVMs1lBwKQ" />
+        <div className={styles['film-desc']}>
+          <ul>
+            <li>
+              <span>Director</span> Ninja Thyberg
+            </li>
+            <li>
+              <span>Producer</span> StDH
+            </li>
+            <li>
+              <span>31 min</span>
+            </li>
+          </ul>
+          <div>
+            <p>
+              <i>
+                Sixteen-year-old Nour is a horny nerd whose greatest desire is
+                to get rid of her virginity. But if she can’t even talk to guys,
+                how the heck will she then get laid?
+              </i>
+            </p>
+            <p>
+              Girls & Boys is a swedish High School comedy, but with a reversed
+              gender system, were women are the predators and men are the prey.
+            </p>
+            <p className={styles.extra}>
+              – <a className={styles.link} href="https://vimeo.com/ondemand/girlsandboys">Watch the film on Vimeo <FontAwesomeIcon icon={faArrowUpRightFromSquare} /></a>
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
   </Layout>
 );
