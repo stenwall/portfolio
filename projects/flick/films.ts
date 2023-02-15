@@ -6,7 +6,7 @@ import homosyster from 'assets/images/flick/projects/min-homosyster.jpg';
 import podium from 'assets/images/flick/projects/podium.jpg';
 import girlsboys from 'assets/images/flick/projects/girls-boys.jpg';
 import bror from 'assets/images/flick/projects/bror.jpg';
-import lisa from 'assets/images/flick/projects/lisaekdahl.jpg';
+import inuti from 'assets/images/flick/projects/inuti.jpg';
 import mazda from 'assets/images/flick/projects/mazda.jpg';
 
 export const films = [
@@ -59,9 +59,9 @@ export const films = [
     delay: 0.3
   },
   {
-    img: lisa,
-    title: 'Lisa Ekdahl',
-    link: '/dop/lisa',
+    img: inuti,
+    title: 'Inuti ett träd',
+    link: '/dop/inuti-ett-trad',
     delay: 0.3
   },
   {

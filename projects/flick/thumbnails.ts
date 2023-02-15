@@ -6,7 +6,7 @@ import homosyster from 'assets/images/flick/projects/min-homosyster.jpg';
 import podium from 'assets/images/flick/projects/podium.jpg';
 import girlsboys from 'assets/images/flick/projects/girls-boys.jpg';
 import bror from 'assets/images/flick/projects/bror.jpg';
-import lisa from 'assets/images/flick/projects/lisaekdahl.jpg';
+import inuti from 'assets/images/flick/projects/inuti.jpg';
 import mazda from 'assets/images/flick/projects/mazda.jpg';
 
 export default [
@@ -18,6 +18,6 @@ export default [
   podium,
   girlsboys,
   bror,
-  lisa,
+  inuti,
   mazda
 ];
