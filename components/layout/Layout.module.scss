@@ -11,15 +11,18 @@
     font-weight: normal;
   }
 
+  a {
+    all: unset;
+    cursor: pointer;
+    display: inline-block;
+  }
+
   .nav {
     margin-left: auto;
     display: flex;
     gap: 2rem;
 
     a {
-      all: unset;
-      cursor: pointer;
-      display: inline-block;
       position: relative;
       padding: 0.5rem 0;
 

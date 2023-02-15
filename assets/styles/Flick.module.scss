@@ -48,6 +48,10 @@
     display: inline-block;
     position: relative;
 
+    svg {
+      width: 13px;
+    }
+
     &::after {
       content: '';
       position: absolute;

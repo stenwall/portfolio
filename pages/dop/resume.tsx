@@ -16,14 +16,17 @@ const Resume = () => (
       </ul>
       <h3>Short / Documentary films</h3>
       <ul>
-        <li>2020 Hemmavid, documentary, Dir: Rebecka Ekholm, Prod: Claes Hedlund/SKH</li>
-        <li>2019 Jamila, short, Dir: Sophie Vukovic, Prod: Grand Slam</li>
+        <li>
+          2020 Hemmavid, documentary, Dir: Rebecka Ekholm, Prod: Claes
+          Hedlund/SKH
+        </li>
+        <li>2019 Jamila, short, Dir: Sophie Vukovic, Prod: Grand Slam Film</li>
         <li>
           2019 Bror, short, Dir: Isabella Carbonell, Prod: Alegren Productions
         </li>
         <li>
           2019 Yustinas hämnd, short, Dir: Isabella Carbonell, Prod: Madbunny
-          Productions
+          Film
         </li>
         <li>2019 After Azeroth, documentary, Dir: Joel Viksten</li>
         <li>

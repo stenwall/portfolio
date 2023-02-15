@@ -50,7 +50,9 @@ const FlickLayout = ({
         }
       `}</style>
       <header className={styles.header}>
-        <h1>Karin Stenwall / Director of Photography</h1>
+        <Link href="/dop">
+          <h1>Karin Stenwall / Director of Photography</h1>
+        </Link>
         <nav className={styles.nav}>
           <Link
             href="/dop"
