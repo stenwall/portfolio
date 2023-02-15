@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { motion, Transition, Orchestration } from 'framer-motion';
+import { motion, Transition } from 'framer-motion';
 import styles from '@styles/Flick.module.scss';
 import Image, { StaticImageData } from 'next/image';
 

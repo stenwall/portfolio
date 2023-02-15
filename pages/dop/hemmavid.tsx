@@ -2,8 +2,6 @@ import Image from 'next/image';
 import styles from '@styles/Flick.module.scss';
 import Layout from '@components/layout/FlickLayout';
 import hemmavid from 'assets/images/flick/projects/hemmavid-poster.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 const Hemmavid = () => (
   <Layout>

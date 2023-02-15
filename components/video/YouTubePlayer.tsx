@@ -1,13 +1,12 @@
 import styles from '@components/video/Video.module.scss';
 import YouTube, { YouTubeProps } from 'react-youtube';
-import { useEffect, useRef } from 'react';
 
 interface Props {
   id: string;
 }
 
 const YouTubePlayer = ({ id }: Props) => {
-  const onPlay: YouTubeProps['onPlay'] = event => {
+  const onPlay: YouTubeProps['onPlay'] = () => {
     console.log('played the video!');
   };
   const onPlayerReady: YouTubeProps['onReady'] = event => {

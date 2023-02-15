@@ -1,7 +1,6 @@
 import styles from '@styles/Flick.module.scss';
 import Layout from '@components/layout/FlickLayout';
 import YouTubePlayer from '@components/video/YouTubePlayer';
-import VimeoPlayer from '@components/video/VimeoPlayer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 

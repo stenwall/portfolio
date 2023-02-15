@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import styles from '@styles/Flick.module.scss';
 import Layout from '@components/layout/FlickLayout';
 
