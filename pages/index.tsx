@@ -66,6 +66,11 @@ const Index = () => {
   return (
     <Layout>
       <main className={styles['main-start']}>
+        <div className={styles['start-title']}>
+          <h1>
+            karin stenwall <span>{subtitle}</span>
+          </h1>
+        </div>
         <section>
           <div className={styles['wrapper-blip']}>
             <object>
@@ -107,11 +112,6 @@ const Index = () => {
           </div>
         </section>
       </main>
-      <div className={styles['start-title']}>
-        <h1>
-          karin stenwall <span>{subtitle}</span>
-        </h1>
-      </div>
     </Layout>
   );
 };

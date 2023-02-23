@@ -9,6 +9,25 @@
   justify-content: center;
   align-items: center;
 
+  .start-title {
+    position: fixed;
+    bottom: 0;
+    left: calc(50%);
+    transform: translateX(-50%);
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      font-style: normal;
+      white-space: nowrap;
+
+      span {
+        display: inline-block;
+        // min-width: 23rem;
+      }
+    }
+  }
+
   section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -17,11 +36,24 @@
 
   @media (max-width: 500px) {
     height: 100%;
+    padding-top: 1rem;
 
     section {
       height: 100%;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr;
+    }
+
+    .start-title {
+      position: relative;
+      left: unset;
+      transform: unset;
+  
+      h1 {
+        margin-top: 0;
+        font-size: 5vw;
+        white-space: break-spaces;
+      }
     }
   }
 
@@ -82,25 +114,6 @@
     svg {
       width: 70%;
       height: 70%;
-    }
-  }
-}
-
-.start-title {
-  position: fixed;
-  bottom: 0;
-  left: calc(50%);
-  transform: translateX(-50%);
-
-  h1 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    font-style: normal;
-    white-space: nowrap;
-
-    span {
-      display: inline-block;
-      // min-width: 23rem;
     }
   }
 }
