@@ -30,7 +30,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, auto);
 
-    > svg {
+    > object {
       display: block;
       padding-top: 15%;
       padding-left: 15%;
@@ -50,7 +50,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, auto);
 
-    > svg {
+    > object {
       display: block;
       grid-column: 2 / 4;
       grid-row: 1 / 4;

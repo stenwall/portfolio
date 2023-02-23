@@ -1,10 +1,5 @@
 import Link from 'next/link';
-import {
-  BaseSyntheticEvent,
-  useEffect,
-  useRef,
-  useState
-} from 'react';
+import { BaseSyntheticEvent, useEffect, useRef, useState } from 'react';
 import { dotAnim, transitionAnim } from 'helpers';
 import Layout from '@components/layout/DefaultLayout';
 import CodeIcon from '@components/svg/CodeIcon';
@@ -73,7 +68,9 @@ const Index = () => {
       <main className={styles['main-start']}>
         <section>
           <div className={styles['wrapper-blip']}>
-            <Blip ref={blipRef} />
+            <object>
+              <Blip ref={blipRef} />
+            </object>
             <Link
               onMouseEnter={() => {
                 hoverHandler('blip');
@@ -90,7 +87,9 @@ const Index = () => {
             </Link>
           </div>
           <div className={styles['wrapper-flick']}>
-            <Flick ref={flickRef} />
+            <object>
+              <Flick ref={flickRef} />
+            </object>
             <Link
               onMouseEnter={() => {
                 hoverHandler('flick');
