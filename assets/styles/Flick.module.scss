@@ -96,7 +96,7 @@
   }
 
   .film-desc {
-    @media screen and (max-width: 1249px) {
+    @media screen and (min-width: 600px) and (max-width: 1249px) {
       display: grid;
       grid-template-columns: max-content auto;
       gap: 5rem;
