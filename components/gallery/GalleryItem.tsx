@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { motion, Transition } from 'framer-motion';
-import styles from '@styles/Flick.module.scss';
+import styles from './Gallery.module.scss';
 import Image, { StaticImageData } from 'next/image';
 
 const hoverBg = {
@@ -37,18 +37,32 @@ const hoverCaption = {
   }
 };
 
+// const attributes = isMobile ? {
+//   drag: "x",
+//   dragConstraints: { left: 0, right: 0 },
+//   animate: { x: myVariable },
+//   onDragEnd: myFunction
+// } : { onMouseOver, onMouseLeave };
+
+// <motion.div {...attributes}> {/* stuff */} </motion.div>
+
 interface Props {
   img: StaticImageData;
   title: string;
   link: string;
   delay: Transition['delay'];
+  hoverable: boolean;
 }
 
 const GalleryItem = (props: Props) => {
-  const { img, title, link, delay } = props;
+  const { img, title, link, delay, hoverable } = props;
 
   return (
-    <motion.li initial="rest" whileHover="hover" animate="rest">
+    <motion.li
+      initial="rest"
+      whileHover={hoverable ? 'hover' : null}
+      animate="rest"
+    >
       <Link href={link}>
         <motion.figure
           initial={{ opacity: 0, scale: 0.5 }}
