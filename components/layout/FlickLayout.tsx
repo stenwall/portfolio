@@ -57,8 +57,9 @@ const FlickLayout = ({
           <h1>Karin Stenwall / Director of Photography</h1>
         </Link>
         <div>
-          {!isDesktop && <Burger open={open} setOpen={setOpen} />}
-          <Menu open={open} desktop={isDesktop} />
+          <Menu open={open} desktop={isDesktop}>
+            {!isDesktop && <Burger open={open} setOpen={setOpen} />}
+          </Menu>
         </div>
       </header>
       {children}

@@ -23,6 +23,7 @@
     padding: 0;
     position: static;
     transform: unset;
+    transition: unset;
   }
 
   &.open {
@@ -32,6 +33,10 @@
   a {
     position: relative;
     padding: 0.5rem 0;
+
+    &:focus {
+      outline: auto;
+    }
 
     &::after {
       content: '';

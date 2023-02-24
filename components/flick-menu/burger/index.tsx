@@ -12,7 +12,14 @@ const Burger = (props: Props) => {
   const burgerClass = classNames(open ? styles.open : null);
 
   return (
-    <button className={styles.wrapper} onClick={() => setOpen(!open)}>
+    <button
+      className={styles.wrapper}
+      onClick={() => setOpen(!open)}
+      aria-label={open ? 'Close menu' : 'Open menu'}
+      aria-expanded={open}
+      aria-controls="menu"
+    >
+      <span>Menu</span>
       <div className={burgerClass} />
       <div className={burgerClass} />
       <div className={burgerClass} />
