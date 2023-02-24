@@ -2,8 +2,11 @@ import styles from '@styles/Flick.module.scss';
 import Layout from '@components/layout/FlickLayout';
 import { films } from 'projects/flick/films';
 import GalleryItem from '@components/galleryItem';
+import useMediaQuery from 'hooks/useMediaQuery';
 
 const Flick = () => {
+  const hoverable = useMediaQuery('(any-hover: hover)');
+
   return (
     <Layout>
       <main>
@@ -16,6 +19,7 @@ const Flick = () => {
                 title={film.title}
                 link={film.link}
                 delay={film.delay}
+                hoverable={hoverable}
               />
             ))}
         </ul>

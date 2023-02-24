@@ -1,9 +1,11 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { Nunito_Sans, Nunito } from '@next/font/google';
 import styles from '@components/layout/Layout.module.scss';
+import Burger from '@components/flick-menu/burger';
+import Menu from '@components/flick-menu/menu';
+import useMediaQuery from 'hooks/useMediaQuery';
 
 const nunitoSans = Nunito_Sans({
   weight: ['200', '300', '400', '600', '700'],
@@ -26,7 +28,8 @@ const FlickLayout = ({
   children,
   title = 'Karin Stenwall | Director of Photography'
 }: Props) => {
-  const { asPath: currentPath } = useRouter();
+  const [open, setOpen] = useState(false);
+  const isDesktop = useMediaQuery('(min-width: 810px)');
 
   return (
     <>
@@ -53,26 +56,10 @@ const FlickLayout = ({
         <Link href="/dop">
           <h1>Karin Stenwall / Director of Photography</h1>
         </Link>
-        <nav className={styles.nav}>
-          <Link
-            href="/dop"
-            className={currentPath === '/dop' ? styles.active : ''}
-          >
-            selected work
-          </Link>
-          <Link
-            href="/dop/resume"
-            className={currentPath === '/dop/resume' ? styles.active : ''}
-          >
-            resumé
-          </Link>
-          <Link
-            href="/dop/contact"
-            className={currentPath === '/dop/contact' ? styles.active : ''}
-          >
-            contact
-          </Link>
-        </nav>
+        <div>
+          {!isDesktop && <Burger open={open} setOpen={setOpen} />}
+          <Menu open={open} desktop={isDesktop} />
+        </div>
       </header>
       {children}
     </>
